@@ -11,11 +11,11 @@
   ],
   "scripts": {
     "prebuild": "rm -rf dist",
-    "build": "pnpm build:tsc && pnpm build:alias",
-    "build:tsc": "pnpm tsc --outDir dist",
+    "build": "yarn build:tsc && yarn build:alias",
+    "build:tsc": "yarn tsc --outDir dist",
     "build:alias": "tsc-alias -p tsconfig.json",
-    "prepublishOnly": "pnpm prebuild && pnpm build",
-    "submit": "pnpm publish --registry=http://localhost:4873"
+    "prepublishOnly": "yarn prebuild && yarn build",
+    "submit": "yarn publish --registry=http://localhost:4873"
   },
   "dependencies": {
     "@amplitude/analytics-react-native": "^1.4.11",
